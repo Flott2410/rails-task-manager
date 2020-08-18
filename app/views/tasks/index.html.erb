@@ -1,0 +1,14 @@
+<h1>This is my task index page</h1>
+
+<ul>
+  <% @tasks.each do |task| %>
+  <% completed = task.completed ? "[X]" : "[ ]" %>
+    <li><%= completed %> - <%= task.title%> - <%= link_to "Show details", task_path(task) %> - <%= link_to "Delete", destroy_path(task), method: :delete %></li>
+  <% end %>
+</ul>
+
+<p><%= link_to "Add a new task", newtask_path %></p>
+
+<!-- ICON ARROWS
+<i class="fas fa-angle-double-right"></i>
+ -->

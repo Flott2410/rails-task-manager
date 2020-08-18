@@ -1,0 +1,13 @@
+<h1>TASK DETAILS PAGE</h1>
+
+<h2><%= @task.title %></h2>
+
+<p><%= @task.details %></p>
+
+<% completed = @task.completed ? "Congrats 🥳 Task done" : "Still on your to-do list 🙄" %>
+
+<p><%= completed %></p>
+
+<p><%= link_to "Update task", edittask_path %></p>
+
+<p><%= link_to "Back to task-list", tasks_path %></p>
